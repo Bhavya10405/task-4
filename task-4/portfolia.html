@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav>
+      <h1>My Portfolio</h1>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- About Section -->
+<section id="about">
+  <div class="about-container">
+    <!-- Personal Photo -->
+    <div class="about-image">
+      <img src="https://img.freepik.com/premium-photo/headshot-photos-indian-women-dynamic-professions-occassions-indian-girl_978786-295.jpg?w=2000" alt="Your Name">
+    </div>
+    <!-- About Text -->
+    <div class="about-text">
+      <h2>Hello, I'm <span class="highlight-name">Kongala Bhavya</span></h2>
+      <p>
+        I am a passionate web developer and tech enthusiast. I specialize in building interactive web applications and creating projects that solve real-world problems. 
+        I have experience in HTML, CSS, JavaScript, and React, and I love learning new technologies to enhance my skills.
+      </p>
+      <p>
+        In my free time, I enjoy exploring new frameworks, contributing to open-source projects, and working on personal projects that challenge my abilities.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <h2>Projects</h2>
+      
+      <!-- Project: Activities + Product Listing -->
+      <div class="project-card">
+        <h3>Activities + Product Listing</h3>
+        <p>Manage tasks and explore products with filtering and sorting functionality.</p>
+        
+        <!-- Tabs for switching -->
+        <div class="tabs">
+          <button class="tab-btn active" onclick="openTab('activities')">Activities</button>
+          <button class="tab-btn" onclick="openTab('products')">Products</button>
+        </div>
+
+        <!-- Activities Tab -->
+        <div id="activities" class="tab-content active">
+          <div class="input-group">
+            <input type="text" id="taskInput" placeholder="Enter an activity...">
+            <button onclick="addTask()">Add</button>
+          </div>
+          <ul id="taskList"></ul>
+        </div>
+
+        <!-- Products Tab -->
+        <div id="products" class="tab-content">
+          <div class="filters">
+            <label>Category:</label>
+            <select id="categoryFilter" onchange="filterProducts()">
+              <option value="all">All</option>
+              <option value="electronics">Electronics</option>
+              <option value="clothing">Clothing</option>
+            </select>
+
+            <label>Sort By:</label>
+            <select id="sortFilter" onchange="filterProducts()">
+              <option value="default">Default</option>
+              <option value="priceLow">Price: Low → High</option>
+              <option value="priceHigh">Price: High → Low</option>
+              <option value="rating">Rating</option>
+            </select>
+          </div>
+          <div id="productGrid" class="project-grid"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message"></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 My Portfolio</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
